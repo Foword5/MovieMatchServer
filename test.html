@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test websocket</title>
+    </head>
+    <body>
+        <div id="messages">
+
+        </div>
+        
+        <textarea name="" id="message1" style="height: 400px;width: 400px;"></textarea>
+        <button id="button1">send</button>
+        <br />
+
+        <textarea name="" id="message2" style="height: 400px;width: 400px;"></textarea>
+        <button id="button2">send</button>
+        <br />
+
+        <textarea name="" id="message3" style="height: 400px;width: 400px;"></textarea>
+        <button id="button3">send</button>
+        <br />
+
+        <script>
+            const messages = document.querySelector('#messages')
+            const message1 = document.querySelector('#message1')
+            const message2 = document.querySelector('#message2')
+            const message3 = document.querySelector('#message3')
+            const btn1 = document.querySelector('#button1')
+            const btn2 = document.querySelector('#button2')
+            const btn3 = document.querySelector('#button3')
+            btn1.addEventListener('click', () =>{
+                ws.send(message1.value)
+            })
+            btn2.addEventListener('click', () =>{
+                ws.send(message2.value)
+            })
+            btn3.addEventListener('click', () =>{
+                ws.send(message3.value)
+            })
+
+            const ws = new WebSocket('ws://localhost:8080');
+            ws.onopen = function open() {
+            };
+
+            ws.onmessage = function message(data) {
+                console.log('received: %s', data.data);
+                messages.innerHTML+= `<p>${data.data}</p>`
+            };
+        </script>
+    </body>
+</html>
