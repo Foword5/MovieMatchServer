@@ -62,7 +62,7 @@ Serveur peut :
 }
 ```
 
-### returns (à celui qui rejoins) :
+### returns (à celui qui rejoint) :
 ```json
 {
     "type": "joinGameSuccess",
