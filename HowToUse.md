@@ -295,3 +295,175 @@ Serveur peut :
     }
 }
 ```
+
+## Ending Game : <hr>
+```json
+{
+    "type":"stopGame",
+    "gameId":"[id de la partie]"
+}
+```
+
+### Returns :
+```json
+{
+    "type": "stopGame",
+    "game": {
+        "id": 336394,
+        "participants": [
+            {
+                "id": 0,
+                "pseudo": "Phillipe",
+                "likedFilms": [
+                    {
+                        "title": "test",
+                        "imgPath": "test",
+                        "genres": [
+                            2,
+                            3
+                        ],
+                        "year": 2003,
+                        "rating": 7.8,
+                        "synopsis": "un film de test"
+                    },
+                    {
+                        "title": "test",
+                        "imgPath": "test",
+                        "genres": [
+                            2,
+                            3
+                        ],
+                        "year": 2003,
+                        "rating": 7.8,
+                        "synopsis": "un film de test"
+                    },
+                    {
+                        "title": "test",
+                        "imgPath": "test",
+                        "genres": [
+                            2,
+                            3
+                        ],
+                        "year": 2003,
+                        "rating": 7.8,
+                        "synopsis": "un film de test"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "pseudo": "michealBay",
+                "likedFilms": [
+                    {
+                        "title": "test",
+                        "imgPath": "test",
+                        "genres": [
+                            2,
+                            3
+                        ],
+                        "year": 2003,
+                        "rating": 7.8,
+                        "synopsis": "un film de test"
+                    },
+                    {
+                        "title": "test",
+                        "imgPath": "test",
+                        "genres": [
+                            2,
+                            3
+                        ],
+                        "year": 2003,
+                        "rating": 7.8,
+                        "synopsis": "un film de test"
+                    },
+                    {
+                        "title": "test",
+                        "imgPath": "test",
+                        "genres": [
+                            2,
+                            3
+                        ],
+                        "year": 2003,
+                        "rating": 7.8,
+                        "synopsis": "un film de test"
+                    }
+                ]
+            }
+        ],
+        "host": {
+            "id": 0,
+            "pseudo": "Phillipe",
+            "likedFilms": [
+                {
+                    "title": "test",
+                    "imgPath": "test",
+                    "genres": [
+                        2,
+                        3
+                    ],
+                    "year": 2003,
+                    "rating": 7.8,
+                    "synopsis": "un film de test"
+                },
+                {
+                    "title": "test",
+                    "imgPath": "test",
+                    "genres": [
+                        2,
+                        3
+                    ],
+                    "year": 2003,
+                    "rating": 7.8,
+                    "synopsis": "un film de test"
+                },
+                {
+                    "title": "test",
+                    "imgPath": "test",
+                    "genres": [
+                        2,
+                        3
+                    ],
+                    "year": 2003,
+                    "rating": 7.8,
+                    "synopsis": "un film de test"
+                }
+            ]
+        },
+        "foundFilms": [
+            {
+                "title": "test",
+                "imgPath": "test",
+                "genres": [
+                    2,
+                    3
+                ],
+                "year": 2003,
+                "rating": 7.8,
+                "synopsis": "un film de test"
+            },
+            {
+                "title": "test",
+                "imgPath": "test",
+                "genres": [
+                    2,
+                    3
+                ],
+                "year": 2003,
+                "rating": 7.8,
+                "synopsis": "un film de test"
+            },
+            {
+                "title": "test",
+                "imgPath": "test",
+                "genres": [
+                    2,
+                    3
+                ],
+                "year": 2003,
+                "rating": 7.8,
+                "synopsis": "un film de test"
+            }
+        ]
+    }
+}
+```

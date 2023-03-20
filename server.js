@@ -145,6 +145,42 @@ wss.on('connection', function connection(ws) {
                     console.log("· User \x1b[31m" + userToAddResult.pseudo +" \x1b[m(\x1b[31m" + userToAddResult.id + "\x1b[0m) added result to game \x1b[33m" + gameToAddResult.id + "\x1b[0m")
 
                     break;
+                
+
+                case "stopGame":
+                    let gameToStop = games.find(game => game.id == data["gameId"]);
+                    if(gameToStop == undefined) {
+                        ws.send(
+                            JSON.stringify({"type": "error", "message": "Partie introuvable"})
+                        );
+                        break;
+                    }
+                    if(gameToStop.host.ws != ws) {
+                        ws.send(
+                            JSON.stringify({"type": "error", "message": "Vous n'êtes pas l'hôte de cette partie"})
+                        );
+                        break;
+                    }
+                    if(gameToStop.status != "started") {
+                        ws.send(
+                            JSON.stringify({"type": "error", "message": "La partie n'a pas commencé"})
+                        );
+                        break;
+                    }
+                    gameToStop.status = "stopped";
+                    for(let participant of gameToStop.participants) {
+                        participant.ws.send(
+                            JSON.stringify({
+                                "type": "stopGame",
+                                "game": gameToStop.toJSON()
+                            })
+                        );
+                    }
+                    games.splice(games.indexOf(gameToStop), 1);
+                    console.log("· Game \x1b[33m" + gameToStop.id + "\x1b[0m stopped")
+                    break;
+
+
                 default:
                     ws.send(
                         JSON.stringify({"type": "error", "message": "Type de message inconnu"})
