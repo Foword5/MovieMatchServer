@@ -36,7 +36,10 @@ wss.on('connection', function connection(ws) {
                     let game = new Game(id, [host], host, films);
                     games.push(game);
                     ws.send(
-                        JSON.stringify({"type": "newGameSuccess"}) // envoyer un message de succès
+                        JSON.stringify({
+                            "type": "newGameSuccess",
+                            "gameId": id
+                        }) // envoyer un message de succès
                     )
                     console.log("· Created a new game with id : \x1b[33m" + id + "\x1b[0m")
                     break;
