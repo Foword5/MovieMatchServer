@@ -67,6 +67,7 @@ Serveur peut :
 ```json
 {
     "type": "joinGameSuccess",
+    "yourId": 2,
     "game": {
         "id": 11076,
         "participants": [

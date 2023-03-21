@@ -60,6 +60,7 @@ wss.on('connection', function connection(ws) {
                     ws.send(
                         JSON.stringify({
                             "type": "joinGameSuccess",
+                            "yourId": idUser,
                             "game": gameToJoin.toJSON()
                         }) // envoyer un message de succès avec la partie
                     )
