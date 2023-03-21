@@ -53,6 +53,12 @@ wss.on('connection', function connection(ws) {
                         );
                         break;
                     }
+                    if(gameToJoin.status != "waitingForPlayers") {
+                        ws.send(
+                            JSON.stringify({"type": "error", "message": "La partie a déjà commencé"})
+                        );
+                        break;
+                    }
                     let idUser;
                     for(idUser = 0; gameToJoin.participants.find(user => user.id == idUser) != undefined;idUser++);
                     let user = new User(idUser, data["userName"], ws);
