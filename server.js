@@ -5,6 +5,8 @@ import { Movie } from './modele/Movie.js' ;
 
 const wss = new WebSocketServer({ port: 8080 });
 
+console.log("Server started on port \x1b[92m8080\x1b[0m")
+
 let games = [];
 
 wss.on('connection', function connection(ws) {
