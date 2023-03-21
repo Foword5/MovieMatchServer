@@ -49,7 +49,8 @@ Serveur peut :
 ### returns (à celui qui a créé la partie):
 ```json
 {
-    "type":"newGameSuccess"
+    "type":"newGameSuccess",
+    "gameId":"[id de la partie]"
 }
 ```
 
