@@ -2,6 +2,7 @@ import { WebSocketServer } from 'ws';
 import { Game } from './modele/Game.js' ;
 import { User } from './modele/User.js' ;
 import { Movie } from './modele/Movie.js' ;
+import { Genre } from './modele/Genre.js' ;
 
 const wss = new WebSocketServer({ port: 8080 });
 
@@ -31,7 +32,11 @@ wss.on('connection', function connection(ws) {
 
                     let films = [];
                     for(let element of data["films"]) {
-                        films.push(new Movie(element["title"], element["imgPath"], element["genres"], element["year"], element["rating"], element["synopsis"]));
+                        let genres = [];
+                        for(let genre of element["genres"]) {
+                            genres.push(new Genre(genre["id"], genre["name"]));
+                        }
+                        films.push(new Movie(element["title"], element["imgPath"], genres, element["year"], element["rating"], element["synopsis"]));
                     }
                     let game = new Game(id, [host], host, films);
                     games.push(game);
@@ -141,7 +146,11 @@ wss.on('connection', function connection(ws) {
                     }
                     let likedFilms = [];
                     for(let element of data["likedFilms"]) {
-                        likedFilms.push(new Movie(element["title"], element["imgPath"], element["genres"], element["year"], element["rating"], element["synopsis"]));
+                        let genres = [];
+                        for(let genre of element["genres"]) {
+                            genres.push(new Genre(genre["id"], genre["name"]));
+                        }
+                        likedFilms.push(new Movie(element["title"], element["imgPath"], genres, element["year"], element["rating"], element["synopsis"]));
                     }
                     userToAddResult.likedFilms = likedFilms;
                     for(let participant of gameToAddResult.participants) {

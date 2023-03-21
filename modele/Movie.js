@@ -23,10 +23,14 @@ class Movie {
      * @returns {JSON} l'objet converti en JSON
      */
     toJSON() {
+        let genreJSON = [];
+        this.genres.forEach(genre => {
+            genreJSON.push(genre.toJSON());
+        });
         return {
             title: this.title,
             imgPath: this.imgPath,
-            genres: this.genres,
+            genres: genreJSON,
             year: this.year,
             rating: this.rating,
             synopsis: this.synopsis

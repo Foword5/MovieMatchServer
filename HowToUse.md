@@ -19,29 +19,56 @@ Serveur peut :
     "hostName" : "Phillipe",
     "films" : [
         {
-            "title" : "test",
-            "imgPath" : "test", 
-            "genres" : [2,3], 
-            "year" : 2003, 
-            "rating" : 7.8, 
-            "synopsis" : "un film de test"
-        },
-        {
-            "title" : "test",
-            "imgPath" : "test", 
-            "genres" : [2,3], 
-            "year" : 2003, 
-            "rating" : 7.8, 
-            "synopsis" : "un film de test"
-        },
-        {
-            "title" : "test",
-            "imgPath" : "test", 
-            "genres" : [2,3], 
-            "year" : 2003, 
-            "rating" : 7.8, 
-            "synopsis" : "un film de test"
-        }
+                "title": "test",
+                "imgPath": "test",
+                "genres": [
+                    {
+                        "id":1,
+                        "name":"western"
+                    },
+                    {
+                        "id":2,
+                        "name":"western"
+                    }
+                ],
+                "year": 2003,
+                "rating": 7.8,
+                "synopsis": "un film de test"
+            },
+            {
+                "title": "test",
+                "imgPath": "test",
+                "genres": [
+                    {
+                        "id":1,
+                        "name":"western"
+                    },
+                    {
+                        "id":2,
+                        "name":"western"
+                    }
+                ],
+                "year": 2003,
+                "rating": 7.8,
+                "synopsis": "un film de test"
+            },
+            {
+                "title": "test",
+                "imgPath": "test",
+                "genres": [
+                    {
+                        "id":1,
+                        "name":"western"
+                    },
+                    {
+                        "id":2,
+                        "name":"western"
+                    }
+                ],
+                "year": 2003,
+                "rating": 7.8,
+                "synopsis": "un film de test"
+            }
     ]
 }
 ```
@@ -67,9 +94,9 @@ Serveur peut :
 ```json
 {
     "type": "joinGameSuccess",
-    "yourId": 2,
+    "yourId": 1,
     "game": {
-        "id": 11076,
+        "id": 17635,
         "participants": [
             {
                 "id": 0,
@@ -78,11 +105,6 @@ Serveur peut :
             },
             {
                 "id": 1,
-                "pseudo": "michealBay",
-                "likedFilms": []
-            },
-            {
-                "id": 2,
                 "pseudo": "michealBay",
                 "likedFilms": []
             }
@@ -97,8 +119,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -108,8 +136,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -119,8 +153,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -156,7 +196,7 @@ Serveur peut :
 {
     "type": "startGame",
     "game": {
-        "id": 11076,
+        "id": 17635,
         "participants": [
             {
                 "id": 0,
@@ -165,11 +205,6 @@ Serveur peut :
             },
             {
                 "id": 1,
-                "pseudo": "michealBay",
-                "likedFilms": []
-            },
-            {
-                "id": 2,
                 "pseudo": "michealBay",
                 "likedFilms": []
             }
@@ -184,8 +219,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -195,8 +236,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -206,8 +253,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -225,28 +278,55 @@ Serveur peut :
     "gameId" : "[id de la partie]",
     "likedFilms" : [
         {
-            "title" : "test",
-            "imgPath" : "test", 
-            "genres" : [2,3], 
-            "year" : 2003, 
-            "rating" : 7.8, 
-            "synopsis" : "un film de test"
+            "title": "test",
+            "imgPath": "test",
+            "genres": [
+                {
+                    "id": 1,
+                    "name": "western"
+                },
+                {
+                    "id": 2,
+                    "name": "western"
+                }
+            ],
+            "year": 2003,
+            "rating": 7.8,
+            "synopsis": "un film de test"
         },
         {
-            "title" : "test",
-            "imgPath" : "test", 
-            "genres" : [2,3], 
-            "year" : 2003, 
-            "rating" : 7.8, 
-            "synopsis" : "un film de test"
+            "title": "test",
+            "imgPath": "test",
+            "genres": [
+                {
+                    "id": 1,
+                    "name": "western"
+                },
+                {
+                    "id": 2,
+                    "name": "western"
+                }
+            ],
+            "year": 2003,
+            "rating": 7.8,
+            "synopsis": "un film de test"
         },
         {
-            "title" : "test",
-            "imgPath" : "test", 
-            "genres" : [2,3], 
-            "year" : 2003, 
-            "rating" : 7.8, 
-            "synopsis" : "un film de test"
+            "title": "test",
+            "imgPath": "test",
+            "genres": [
+                {
+                    "id": 1,
+                    "name": "western"
+                },
+                {
+                    "id": 2,
+                    "name": "western"
+                }
+            ],
+            "year": 2003,
+            "rating": 7.8,
+            "synopsis": "un film de test"
         }
     ]
 }
@@ -257,15 +337,21 @@ Serveur peut :
 {
     "type": "newResult",
     "user": {
-        "id": 1,
-        "pseudo": "michealBay",
+        "id": 0,
+        "pseudo": "Phillipe",
         "likedFilms": [
             {
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -275,8 +361,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -286,8 +378,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -311,7 +409,7 @@ Serveur peut :
 {
     "type": "stopGame",
     "game": {
-        "id": 336394,
+        "id": 17635,
         "participants": [
             {
                 "id": 0,
@@ -321,8 +419,14 @@ Serveur peut :
                         "title": "test",
                         "imgPath": "test",
                         "genres": [
-                            2,
-                            3
+                            {
+                                "id": 1,
+                                "name": "western"
+                            },
+                            {
+                                "id": 2,
+                                "name": "western"
+                            }
                         ],
                         "year": 2003,
                         "rating": 7.8,
@@ -332,8 +436,14 @@ Serveur peut :
                         "title": "test",
                         "imgPath": "test",
                         "genres": [
-                            2,
-                            3
+                            {
+                                "id": 1,
+                                "name": "western"
+                            },
+                            {
+                                "id": 2,
+                                "name": "western"
+                            }
                         ],
                         "year": 2003,
                         "rating": 7.8,
@@ -343,8 +453,14 @@ Serveur peut :
                         "title": "test",
                         "imgPath": "test",
                         "genres": [
-                            2,
-                            3
+                            {
+                                "id": 1,
+                                "name": "western"
+                            },
+                            {
+                                "id": 2,
+                                "name": "western"
+                            }
                         ],
                         "year": 2003,
                         "rating": 7.8,
@@ -360,8 +476,14 @@ Serveur peut :
                         "title": "test",
                         "imgPath": "test",
                         "genres": [
-                            2,
-                            3
+                            {
+                                "id": 1,
+                                "name": "western"
+                            },
+                            {
+                                "id": 2,
+                                "name": "western"
+                            }
                         ],
                         "year": 2003,
                         "rating": 7.8,
@@ -371,8 +493,14 @@ Serveur peut :
                         "title": "test",
                         "imgPath": "test",
                         "genres": [
-                            2,
-                            3
+                            {
+                                "id": 1,
+                                "name": "western"
+                            },
+                            {
+                                "id": 2,
+                                "name": "western"
+                            }
                         ],
                         "year": 2003,
                         "rating": 7.8,
@@ -382,8 +510,14 @@ Serveur peut :
                         "title": "test",
                         "imgPath": "test",
                         "genres": [
-                            2,
-                            3
+                            {
+                                "id": 1,
+                                "name": "western"
+                            },
+                            {
+                                "id": 2,
+                                "name": "western"
+                            }
                         ],
                         "year": 2003,
                         "rating": 7.8,
@@ -400,8 +534,14 @@ Serveur peut :
                     "title": "test",
                     "imgPath": "test",
                     "genres": [
-                        2,
-                        3
+                        {
+                            "id": 1,
+                            "name": "western"
+                        },
+                        {
+                            "id": 2,
+                            "name": "western"
+                        }
                     ],
                     "year": 2003,
                     "rating": 7.8,
@@ -411,8 +551,14 @@ Serveur peut :
                     "title": "test",
                     "imgPath": "test",
                     "genres": [
-                        2,
-                        3
+                        {
+                            "id": 1,
+                            "name": "western"
+                        },
+                        {
+                            "id": 2,
+                            "name": "western"
+                        }
                     ],
                     "year": 2003,
                     "rating": 7.8,
@@ -422,8 +568,14 @@ Serveur peut :
                     "title": "test",
                     "imgPath": "test",
                     "genres": [
-                        2,
-                        3
+                        {
+                            "id": 1,
+                            "name": "western"
+                        },
+                        {
+                            "id": 2,
+                            "name": "western"
+                        }
                     ],
                     "year": 2003,
                     "rating": 7.8,
@@ -436,8 +588,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -447,8 +605,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
@@ -458,8 +622,14 @@ Serveur peut :
                 "title": "test",
                 "imgPath": "test",
                 "genres": [
-                    2,
-                    3
+                    {
+                        "id": 1,
+                        "name": "western"
+                    },
+                    {
+                        "id": 2,
+                        "name": "western"
+                    }
                 ],
                 "year": 2003,
                 "rating": 7.8,
