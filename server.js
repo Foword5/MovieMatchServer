@@ -36,7 +36,7 @@ wss.on('connection', function connection(ws) {
                         for(let genre of element["genres"]) {
                             genres.push(new Genre(genre["id"], genre["name"]));
                         }
-                        films.push(new Movie(element["title"], element["imgPath"], genres, element["year"], element["rating"], element["synopsis"]));
+                        films.push(new Movie(element["title"], element["imgPath"], genres, element["year"], element["rating"], element["synopsis"], element["id"]));
                     }
                     let game = new Game(id, [host], host, films);
                     games.push(game);
@@ -150,7 +150,7 @@ wss.on('connection', function connection(ws) {
                         for(let genre of element["genres"]) {
                             genres.push(new Genre(genre["id"], genre["name"]));
                         }
-                        likedFilms.push(new Movie(element["title"], element["imgPath"], genres, element["year"], element["rating"], element["synopsis"]));
+                        likedFilms.push(new Movie(element["title"], element["imgPath"], genres, element["year"], element["rating"], element["synopsis"], element["id"]));
                     }
                     userToAddResult.likedFilms = likedFilms;
                     for(let participant of gameToAddResult.participants) {

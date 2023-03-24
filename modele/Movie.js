@@ -9,13 +9,14 @@
  * @property {string} synopsis le synopsis du film
  */
 class Movie {
-    constructor(title, imgPath, genres, year, rating, synopsis) {
+    constructor(title, imgPath, genres, year, rating, synopsis, id) {
         this.title = title;
         this.imgPath = imgPath;
         this.genres = genres;
         this.year = year;
         this.rating = rating;
         this.synopsis = synopsis;
+        this.id = id;
     }
 
     /** Convertit l'objet en JSON
@@ -33,7 +34,8 @@ class Movie {
             genres: genreJSON,
             year: this.year,
             rating: this.rating,
-            synopsis: this.synopsis
+            synopsis: this.synopsis,
+            id: this.id
         }
     }
 }

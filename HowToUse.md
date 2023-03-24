@@ -33,7 +33,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id":0
             },
             {
                 "title": "test",
@@ -50,7 +51,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id":1
             },
             {
                 "title": "test",
@@ -67,7 +69,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id":2
             }
     ]
 }
@@ -96,7 +99,7 @@ Serveur peut :
     "type": "joinGameSuccess",
     "yourId": 1,
     "game": {
-        "id": 17635,
+        "id": 434740,
         "participants": [
             {
                 "id": 0,
@@ -130,7 +133,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 0
             },
             {
                 "title": "test",
@@ -147,7 +151,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 1
             },
             {
                 "title": "test",
@@ -164,7 +169,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 2
             }
         ]
     }
@@ -196,7 +202,7 @@ Serveur peut :
 {
     "type": "startGame",
     "game": {
-        "id": 17635,
+        "id": 434740,
         "participants": [
             {
                 "id": 0,
@@ -230,7 +236,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 0
             },
             {
                 "title": "test",
@@ -247,7 +254,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 1
             },
             {
                 "title": "test",
@@ -264,7 +272,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 2
             }
         ]
     }
@@ -292,7 +301,8 @@ Serveur peut :
             ],
             "year": 2003,
             "rating": 7.8,
-            "synopsis": "un film de test"
+            "synopsis": "un film de test",
+            "id": 0
         },
         {
             "title": "test",
@@ -309,7 +319,8 @@ Serveur peut :
             ],
             "year": 2003,
             "rating": 7.8,
-            "synopsis": "un film de test"
+            "synopsis": "un film de test",
+            "id": 1
         },
         {
             "title": "test",
@@ -326,7 +337,8 @@ Serveur peut :
             ],
             "year": 2003,
             "rating": 7.8,
-            "synopsis": "un film de test"
+            "synopsis": "un film de test",
+            "id": 2
         }
     ]
 }
@@ -337,8 +349,8 @@ Serveur peut :
 {
     "type": "newResult",
     "user": {
-        "id": 0,
-        "pseudo": "Phillipe",
+        "id": 1,
+        "pseudo": "michealBay",
         "likedFilms": [
             {
                 "title": "test",
@@ -355,7 +367,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 0
             },
             {
                 "title": "test",
@@ -372,7 +385,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 1
             },
             {
                 "title": "test",
@@ -389,7 +403,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 2
             }
         ]
     }
@@ -409,7 +424,7 @@ Serveur peut :
 {
     "type": "stopGame",
     "game": {
-        "id": 17635,
+        "id": 466390,
         "participants": [
             {
                 "id": 0,
@@ -430,7 +445,8 @@ Serveur peut :
                         ],
                         "year": 2003,
                         "rating": 7.8,
-                        "synopsis": "un film de test"
+                        "synopsis": "un film de test",
+                        "id": 0
                     },
                     {
                         "title": "test",
@@ -447,7 +463,8 @@ Serveur peut :
                         ],
                         "year": 2003,
                         "rating": 7.8,
-                        "synopsis": "un film de test"
+                        "synopsis": "un film de test",
+                        "id": 1
                     },
                     {
                         "title": "test",
@@ -464,7 +481,8 @@ Serveur peut :
                         ],
                         "year": 2003,
                         "rating": 7.8,
-                        "synopsis": "un film de test"
+                        "synopsis": "un film de test",
+                        "id": 2
                     }
                 ]
             },
@@ -487,7 +505,8 @@ Serveur peut :
                         ],
                         "year": 2003,
                         "rating": 7.8,
-                        "synopsis": "un film de test"
+                        "synopsis": "un film de test",
+                        "id": 0
                     },
                     {
                         "title": "test",
@@ -504,7 +523,8 @@ Serveur peut :
                         ],
                         "year": 2003,
                         "rating": 7.8,
-                        "synopsis": "un film de test"
+                        "synopsis": "un film de test",
+                        "id": 1
                     },
                     {
                         "title": "test",
@@ -521,7 +541,8 @@ Serveur peut :
                         ],
                         "year": 2003,
                         "rating": 7.8,
-                        "synopsis": "un film de test"
+                        "synopsis": "un film de test",
+                        "id": 2
                     }
                 ]
             }
@@ -545,7 +566,8 @@ Serveur peut :
                     ],
                     "year": 2003,
                     "rating": 7.8,
-                    "synopsis": "un film de test"
+                    "synopsis": "un film de test",
+                    "id": 0
                 },
                 {
                     "title": "test",
@@ -562,7 +584,8 @@ Serveur peut :
                     ],
                     "year": 2003,
                     "rating": 7.8,
-                    "synopsis": "un film de test"
+                    "synopsis": "un film de test",
+                    "id": 1
                 },
                 {
                     "title": "test",
@@ -579,7 +602,8 @@ Serveur peut :
                     ],
                     "year": 2003,
                     "rating": 7.8,
-                    "synopsis": "un film de test"
+                    "synopsis": "un film de test",
+                    "id": 2
                 }
             ]
         },
@@ -599,7 +623,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 0
             },
             {
                 "title": "test",
@@ -616,7 +641,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 1
             },
             {
                 "title": "test",
@@ -633,7 +659,8 @@ Serveur peut :
                 ],
                 "year": 2003,
                 "rating": 7.8,
-                "synopsis": "un film de test"
+                "synopsis": "un film de test",
+                "id": 2
             }
         ]
     }
