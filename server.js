@@ -216,12 +216,6 @@ wss.on('connection', function connection(ws) {
                         );
                         break;
                     }
-                    if(gameToStop.status != "started") {
-                        ws.send(
-                            JSON.stringify({"type": "error", "message": "La partie n'a pas commencé"})
-                        );
-                        break;
-                    }
                     gameToStop.status = "stopped";
                     for(let participant of gameToStop.participants) {
                         participant.ws.send(
