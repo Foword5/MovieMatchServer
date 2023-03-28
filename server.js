@@ -14,8 +14,8 @@ wss.on('connection', function connection(ws) {
     try {
     console.log("· New connection : \x1b[92m" + ws._socket.remoteAddress + "\x1b[0m");
 
-    for(let game of games) { // supprimer les parties trop anciennes (2 jours) (une partie n'aurait pas été supprimée)
-        if(game.createDate.getTime() < new Date().getTime() - 2 * 24 * 60 * 60 * 1000) {
+    for(let game of games) { // supprimer les parties trop anciennes (3 heures) (une partie n'aurait pas été supprimée)
+        if(game.createDate.getTime() < new Date().getTime() - 3 * 60 * 60 * 1000) {
             games.splice(games.indexOf(game), 1);
             console.log("· Deleted a game with id : \x1b[33m" + str(game.id) + "\x1b[0m")
         }
@@ -86,6 +86,40 @@ wss.on('connection', function connection(ws) {
                         }
                     }
                     console.log("· User \x1b[31m" + user.pseudo +" \x1b[m(\x1b[31m" + user.id + "\x1b[0m) joined game \x1b[33m" + gameToJoin.id + "\x1b[0m")
+                    break;
+
+                
+                case "leaveGame":
+                    let gameToLeave = games.find(game => game.id == data["gameId"]);
+                    if(gameToLeave == undefined) {
+                        ws.send(
+                            JSON.stringify({"type": "error", "message": "Partie introuvable"})
+                        );
+                        break;
+                    }
+                    if(gameToLeave.status != "waitingForPlayers") {
+                        ws.send(
+                            JSON.stringify({"type": "error", "message": "La partie a déjà commencé"})
+                        );
+                        break;
+                    }
+                    let userToLeave = gameToLeave.participants.find(user => user.ws == ws);
+                    if(userToLeave == undefined) {
+                        ws.send(
+                            JSON.stringify({"type": "error", "message": "Vous n'êtes pas dans cette partie"})
+                        );
+                        break;
+                    }
+                    gameToLeave.removeParticipant(userToLeave);
+                    for(let participant of gameToLeave.participants) {
+                        participant.ws.send(
+                            JSON.stringify({
+                                "type": "playerLeft",
+                                "userId": userToLeave.id
+                            }) // envoyer un message aux autres participants
+                        )
+                    }
+                    console.log("· User \x1b[31m" + userToLeave.pseudo +" \x1b[0m(\x1b[31m" + userToLeave.id + "\x1b[0m) left game \x1b[33m" + gameToLeave.id + "\x1b[0m")
                     break;
 
 

@@ -189,6 +189,22 @@ Serveur peut :
 }
 ```
 
+## LeaveGame : <hr>
+```json
+{
+    "type":"leaveGame",
+    "gameId":"[id de la partie]"
+}
+```
+
+### Return (à tous sauf celui qui à quitté):
+```json
+{
+    "type": "playerLeft",
+    "userId": 3
+}
+```
+
 ## StartGame : <hr>
 ```json
 {

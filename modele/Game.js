@@ -26,6 +26,14 @@ class Game {
       this.participants.push(user);
     }
   
+    /** Supprime un participant de la partie
+     * 
+     * @param {*} user l'utilisateur à supprimer de la partie
+     */
+    removeParticipant(user) {
+        this.participants = this.participants.filter(participant => participant.id != user.id);
+    }
+
     /** Convertit l'objet en JSON
      * 
      * @returns {JSON} l'objet converti en JSON
