@@ -97,12 +97,6 @@ wss.on('connection', function connection(ws) {
                         );
                         break;
                     }
-                    if(gameToLeave.status != "waitingForPlayers") {
-                        ws.send(
-                            JSON.stringify({"type": "error", "message": "La partie a déjà commencé"})
-                        );
-                        break;
-                    }
                     let userToLeave = gameToLeave.participants.find(user => user.ws == ws);
                     if(userToLeave == undefined) {
                         ws.send(
