@@ -17,7 +17,7 @@ wss.on('connection', function connection(ws) {
     for(let game of games) { // supprimer les parties trop anciennes (3 heures) (une partie n'aurait pas été supprimée)
         if(game.createDate.getTime() < new Date().getTime() - 3 * 60 * 60 * 1000) {
             games.splice(games.indexOf(game), 1);
-            console.log("· Deleted a game with id : \x1b[33m" + str(game.id) + "\x1b[0m")
+            console.log("· Deleted a game with id : \x1b[33m" + game.id + "\x1b[0m")
         }
     }
     ws.on('message', function message(data) {
